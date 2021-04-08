@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <meta name="google-signin-client_id" content="312343859144-i8hq2j39mjn93m3ko9dujnn411dqgdiv.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js"></script> 
+    <title>React App</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      function signOut(){
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(()=>{
+          console.log("Signed out")
+        })
+      }
+    </script>
+  </body>
+</html>
